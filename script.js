@@ -35,6 +35,12 @@ reserveForm.addEventListener("submit" , function (event){
   } else {
     seat = getFirstFreeSeat();
   }
+  // Vérifier les informations de réservation //
+  if (name === "" || seat === 0 || isSeatTaken(seat)){
+    return;
+  }
+  // Enregistrer la réservation //
+  reservations.push({name :name,seat: seat});
   
   console.log("Nom :", name);
   console.log("Siège attribué :", seat);
