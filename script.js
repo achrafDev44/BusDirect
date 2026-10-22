@@ -2,7 +2,7 @@
 const reserveForm = document.querySelector("#reserveForm");
 const passengerName = document.querySelector("#passengerName");
 const passengerSeat = document.querySelector("#passengerSeat");
-
+ const allSeats = document.querySelectorAll("#seats button");
 const TOTAL_SEATS = 20;
 let reservations = [];
 // Vérifie si le siège est disponible.//
@@ -23,6 +23,13 @@ function getFirstFreeSeat(){
     }
     return 0;
 }
+// faire  color rouge et vert //
+function showSeatBusy(number , name){
+  const seat = allSeats[number-1];
+  seat.classList.remove("border-green-300", "bg-green-50" , "text-green-700");
+  seat.classList.add("border-red-300", "bg-red-50", "text-red-700");
+  seat.innerHTML = number + "<br>" + name ;
+}
 // Quand l'utilisateur clic sur confirmer //
 reserveForm.addEventListener("submit" , function (event){
   event.preventDefault();
@@ -41,6 +48,8 @@ reserveForm.addEventListener("submit" , function (event){
   }
   // Enregistrer la réservation //
   reservations.push({name :name,seat: seat});
+  showSeatBusy(seat,name);
+  reserveForm.reset();
   
   console.log("Nom :", name);
   console.log("Siège attribué :", seat);
