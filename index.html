@@ -28,6 +28,28 @@
              </article>
         </section>
     </main>
+    <!-- Formulaire de reservations  -->
+     <section class="rounded-xl bg-white p-6 shadow-sm">
+        <h2 class="mb-4 text-xl font-bold">Réservation un siége</h2>
+
+        <form id ="form-reservation" class="space-y-4">
+            <div>
+                <label for="nom-passager" class="mb-1 block font-medium"> Nom du passager</label>
+                <input type="text" id="nom-passager" placeholder="Entrer Votre nom" class="w-full rounded-lg border-slate-300 p-3" required>
+            </div>
+            <div>
+                <label for="numero-siege" class="mb-1 block font-medium"> Choisir un siège</label>
+                <select id="numero-siege" class="w-full rounded-lg border border-slate-300 p-3 required">
+                    <option value="">Choisir un siège</option>
+                </select>
+            </div>
+            <button type="submit" class="rounded-lg bg-blue-600 px-5 py-3 font-bold text-white">Réserver
+            </button>
+            <p id="message-reservation" class="font-medium"></p>
+
+        </form>
+
+     </section>
     <section class="rounded-xl bg-white p-6 shadow-sm">
         <h2 class="mb-2 text-xl font-bold">Plan de la cabine</h2>
         <div class="mb-5 flex flex-wrap gap-4 text-sm">
