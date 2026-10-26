@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusDirect</title>
+    <script src ="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+    <header class="bg-slate-900 px-6 py-6 text-white">
+        <div class="mx-auto max-w-6xl">
+            <h1 class="text-3xl font-bold">BusDirect</h1>
+            <p2 class="mt-2 text-slate-300">Safi -> Marrakech</p2>
+        </div>
+    </header>
+<!-- hada bach li carte yjiwena mekadinine fi espace  -->
+    <main class="mx-auto max-w-6xl space-y-6 p-6"> 
+ <!-- hada bach espace mabine article o  article  -->
+        <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"> 
+            <article class="rounded-xl bg-white p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Places disponibles</p>
+                <p id="places-disponible" class="mt-2 text-3xl font-bold">20/20</p>
+            </article>
+
+            <article class="rounded-xl bg-white p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Prix total</p>
+                <p id="prix-total" class="mt-2 text-3xl font-bold">0 DH</p>
+             </article>
+        </section>
+    </main>
+    <section class="rounded-xl bg-white p-6 shadow-sm">
+        <h2 class="mb-2 text-xl font-bold">Plan de la cabine</h2>
+        <div class="mb-5 flex flex-wrap gap-4 text-sm">
+            <p class="flex items-center gap-2">
+                <span class="h-4 w-4 rounded bg-green-500"></span>
+                Libre
+            </p>
+            <p class="flex item-centre gap-2">
+                <span class="h-4 w-4 rounded bg-red-500"></span>
+                Occupé
+            </p>
+        </div>
+        <div id="plan-bus" class="grid grid-cols-2 gap-4 sm:grid-colos-4"> 
+        </div>
+    </section>  
+ <script src="script.js"></script>   
+</body>
+</html>
