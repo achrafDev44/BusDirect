@@ -71,6 +71,12 @@
         <h2 class="mb-4 text-xl font-bold">Modifier une reservation </h2>
         <form id="form-modification" class="mb-1 block font-medium">
             <div>
+                <label for="reservation-a-modifier" class="mb-1 block font-medium"> Choisir la reservation pour modifier</label>
+                <select id="reservation-a-modifier" class="w-full rounded-lg border border-slate-300 p-3" required>
+                    <option value="">Choisir une réservation</option>
+                </select>
+            </div>
+            <div>
                 <label for="nom-modification" class="mb-1 block font-medium"> Nouveau nom du passager</label>
                 <input type="text" id="nom-modification" placeholder="Entrer le nouveau nom" class="w-full rounded-lg border border-slate-300 p-3" required>
             </div>

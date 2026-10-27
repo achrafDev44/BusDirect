@@ -23,6 +23,7 @@ for (let i = 1; i<= 20;i++){
     siege.className="rounded-lg bg-green-500 p-4 font-bold text-white";
     planBus.appendChild(siege);
 }
+
 // ajoute les siege dans Option
 for(let i = 1;i<=20;i++){
     const option = document.createElement("option");
@@ -51,6 +52,15 @@ formReservation.addEventListener("submit",function(event){
         nom: nom,
         siege: siege
     });
+
+    // rouge et vert
+    const siegeElement = document.querySelector(`#siege-${siege}`);
+    // remove = supprimer la class
+    siegeElement.classList.remove("bg-green-500");
+    // add = ajouter la class
+    siegeElement.classList.add("bg-red-500");
+    siegeElement.innerHTML = `Siege ${siege}<br>${nom}`;
+
     message.textContent ="réservation succes";
     // effacer le nom de passager apres reservation
     inputNom.value = "";
