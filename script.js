@@ -1,6 +1,8 @@
 const planBus = document.querySelector("#plan-bus");
 const selectorSiege = document.querySelector("#numero-siege");
 const formReservation = document.querySelector("#form-reservation");
+const listeReservation = document.querySelector("#modifier-reservation");
+const reservations = [];
 //  Creation de 20 sieges
 for (let i = 1; i<= 20;i++){
     const siege = document.createElement("button");
