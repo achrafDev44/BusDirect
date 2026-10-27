@@ -6,6 +6,7 @@ const inputNom = document.querySelector("#nom-passager");
 const message = document.querySelector("#message-reservation");
 
 const formModification = document.querySelector("#form-modification");
+const reservationAModifier = document.querySelector("#reservation-a-modifier");
 const nomModification = document.querySelector("#nom-modification");
 const siegeModification = document.querySelector("#siege-modification");
 
@@ -22,6 +23,16 @@ for (let i = 1; i<= 20;i++){
     siege.id=`siege-${i}`;
     siege.className="rounded-lg bg-green-500 p-4 font-bold text-white";
     planBus.appendChild(siege);
+}
+
+function afficherReservations(){
+    reservationAModifier.innerHTML = '<option value ="">Choisir une reservation</option>';
+    reservations.forEach(function(reservation,index){
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = `Siege${reservation.siege}-${reservation.nom}`;
+        reservationAModifier.appendChild(option);
+    });
 }
 
 // ajoute les siege dans Option
@@ -61,6 +72,7 @@ formReservation.addEventListener("submit",function(event){
     siegeElement.classList.add("bg-red-500");
     siegeElement.innerHTML = `Siege ${siege}<br>${nom}`;
 
+    afficherReservations();
     message.textContent ="réservation succes";
     // effacer le nom de passager apres reservation
     inputNom.value = "";
