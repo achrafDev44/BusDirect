@@ -65,15 +65,37 @@
         <div id="plan-bus" class="grid grid-cols-2 gap-4 sm:grid-colos-4"> 
         </div>
     </section>  
-    <!-- liste des reservations -->
+   <!-- Formulaire de modification -->
+    <section class="rounded-xl bg-white p-6 shadow-sm ">
+        <h2 class="mb-4 text-xl font-bold">Modifier une reservation </h2>
+        <form id="form-modification" class="mb-1 block font-medium">
+            <div>
+                <label for="nom-modification" class="mb-1 block font-medium"> Nouveau nom du passager</label>
+                <input type="text" id="nom-modification" placeholder="Entrer le nouveau nom" class="w-full rounded-lg border border-slate-300 p-3" required>
+            </div>
+            <div>
+                <label for="siege-modification" class="mb-1 block font-medium"> Nouveau siege</label>
+                <select id="siege-modification" class="w-full rounded-lg border border-slate-300 p-3" required>
+                    <option value="">Choisir un siege</option>
+                </select>
+            </div>
+            <button type="=submit" class="rounded-lg bg-blue-600 px-5 py-5 m-2 font-bold text-white">Modifier </button>
+        </form>
+    </section>
+    <!-- Formulaire de supprimer -->
      <section class="rounded-xl bg-white p-6 shadow-sm">
-        <h2 class="mb-4 text-xl font-bold">Modifier réservation</h2>
-        <div id="modifier-reservation" class="space-y-3">
-            <p class="text-slate-500">
-                Aucun resevation
-            </p>
-        </div>
+        <h2 class="mb-4 text-xl font-bold">Supprimer une reservatio</h2>
+        <form id="form-suppression" class="space-y-4">
+            <div>
+                <label for="siege-suppression" class="mb-1 block font-medium">Choisir le siege à supprimer</label>
+                <select id="siege-supprimer" class="w-full rounded-lg border border-slate-300 p-3" required>
+                    <option value="">Choisir un siege</option>
+                </select>
+            </div>
+            <button type="submit" class="rounded-lg bg-blue-600 px-5 py-5 font-bold text-white">Supprimer </button>
+            <p id="message-suppression" class="font-medium"></p>
 
+        </form>
      </section>
  <script src="script.js"></script>   
 </body>
