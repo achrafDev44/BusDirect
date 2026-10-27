@@ -42,6 +42,13 @@ for(let i = 1;i<=20;i++){
     option.text = `Siege ${i}`;
     selectSiege.appendChild(option);
 }
+// ajoute les sieges dans le formulaire modification
+for(let i = 1;i <= 20;i++) {
+    const option = document.createElement("option");
+    option.value = i;
+    option.textContent =`Siege${i}`;
+    siegeModification.appendChild(option);
+}
 formReservation.addEventListener("submit",function(event){
     event.preventDefault();
     const nom = inputNom.value.trim();
