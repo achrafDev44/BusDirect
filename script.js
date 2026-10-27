@@ -1,4 +1,4 @@
-const planBus = document.querySelector("#plan-bus");
+pconst planBus = document.querySelector("#plan-bus");
 const selectorSiege = document.querySelector("#numero-siege");
 const formReservation = document.querySelector("#form-reservation");
 const listeReservation = document.querySelector("#modifier-reservation");
@@ -17,4 +17,11 @@ for(let i = 1;i<=20;i++){
     option.value = i;
     option.text = `Siege ${i}`;
     selectorSiege.appendChild(option);
+}
+function afficherReservations(){
+    listeReservation.innerHTML="";
+    if(reservations.length ===0){
+        listeReservation.innerHTML = `<p class ="text-slate-500> auncune reservation </p>`;
+        return;
+    }
 }
