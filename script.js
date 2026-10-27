@@ -18,6 +18,8 @@ for (let i = 1; i<= 20;i++){
     const siege = document.createElement("button");
     siege.type ="button";
     siege.textContent=`siege ${i}`;
+    // id unique du chaque siege
+    siege.id=`siege-${i}`;
     siege.className="rounded-lg bg-green-500 p-4 font-bold text-white";
     planBus.appendChild(siege);
 }
